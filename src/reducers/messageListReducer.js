@@ -9,10 +9,11 @@ const initialState = [{
 export default function todos(state = initialState, action) {
     switch (action.type) {
         case types.ADD_MESSAGE_LIST:
-            return state.push({
+
+            return state.concat([{
                 msgList: action.msgList,
                 creator: action.creator
-            })
+            }])
         default:
             return state;
     }
