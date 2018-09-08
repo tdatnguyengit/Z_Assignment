@@ -1,0 +1,27 @@
+@import '../_variables.scss';
+
+.type-frame{
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(241,241,241);
+}
+
+.chat-input{
+    border: none;
+    width: calc(100% - 70px);
+}
+
+.chat-input:focus{
+    outline: none;
+}
+
+.chat-wrapper{
+    border-radius: 5px;
+    background-color: white;
+}
+
+.send-btn{
+    color: $primaryColor;
+    cursor: pointer;
+    padding-left: 20px;
+    border-left: solid 1px gray;
+}

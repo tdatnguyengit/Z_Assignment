@@ -1,0 +1,12 @@
+.app {
+  background-color: #dde0e5;
+  /* Used if the image is unavailable */
+  min-height: 100vh;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  padding: 30px; }
