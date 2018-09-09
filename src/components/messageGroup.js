@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 import './messageGroup.css'
 
-class MessageBlock extends Component {
-    render() {
-        return (
-            <div className={this.props.isMe ? 'message-me' : 'message-friend'}>
-                {this.props.value}
-            </div>
-        );
-    }
-}
-
 class MessageGroup extends Component {
     render() {
         return (
-            <div className='message-group'>
+            <div className={this.props.creator.isMe ? 'message-group-me' : 'message-group-friend'}>
                 {
-                    this.props.msgList.map(u=>
+                    this.props.msgList.map((u, i) =>
                         (
-                            <MessageBlock value={u} isMe={this.props.creator.isMe} />
+                            <div key={i} className='message'>
+                                {u}
+                            </div>
                         )
                     )
                 }

@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import { Container, Input, Button } from 'reactstrap'
 import './typeFrame.css'
 import { connect } from 'react-redux';
 import * as messageListActions from '../actions/messageListActions';
 import { Me } from '../constants/people';
+import splitMessage from '../utils/splitMessage';
 
 class TypeFrame extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            msgValue: null
+            msgValue: ''
         }
     }
 
     submitMessage() {
         if (this.state.msgValue) {
-            this.props.addMessageList([this.state.msgValue], Me);
+            var splitMsg = [];
+            try {
+                splitMsg = splitMessage(this.state.msgValue);
+            }
+            catch (e) {
+                splitMsg = ['ERROR: ' + e];
+            }
+            this.props.addMessageList(splitMsg, Me);
             this.setState({ msgValue: '' });
         }
     }
@@ -29,7 +36,7 @@ class TypeFrame extends Component {
                             className='pl5 pr5 pt5 pb5 chat-input d-inline'
                             placeholder='Message'
                             onChange={(event) => { this.setState({ msgValue: event.target.value }) }}
-                            onKeyPress={(event) => { event.key == 'Enter' ? this.submitMessage() : null }}
+                            onKeyPress={(event) => { if (event.key === 'Enter') this.submitMessage() }}
                             value={this.state.msgValue}>
                         </input>
                         <div className='d-inline send-btn' onClick={() => this.submitMessage()}>Send</div>

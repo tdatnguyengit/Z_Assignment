@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header';
-import { Container, Row, Col } from 'reactstrap'
+import { Container } from 'reactstrap'
 import {Anna} from './constants/people'
 import TypeFrame from './components/typeFrame';
 import ChatFrame from './components/chatFrame';

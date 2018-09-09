@@ -1,29 +1,36 @@
 @import '../_variables.scss';
 
-%message{
+%message-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.message{
     border-radius: 5px;
     padding: 10px;
-    margin: 5px 20px;
+    margin: 0px 20px;
     word-wrap: break-word;
     max-width: 80vw;
     clear: both;
 }
 
-.message-me{
-    @extend %message;
-    background-color: rgb(241,241,241);
-    color: black;
+.message-group-me{
+    @extend %message-group;
     float: right;
+    .message{
+        background-color: rgb(241,241,241);
+        color: black;
+        float: right;
+    }
 }
 
-.message-friend{
-    @extend %message;
-    background-color: $secondColor;
-    color: white;
+.message-group-friend{
+    @extend %message-group;
     float: left;
-}
-
-.message-group{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    .message{
+        background-color: $secondColor;
+        color: white;
+        float: left;
+    }
 }
