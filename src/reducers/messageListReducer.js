@@ -2,7 +2,7 @@ import * as types from '../constants/actionTypes'
 import * as people from '../constants/people'
 
 const initialState = [{
-    msgList: ['Hello! Cant I have you?'],
+    msgList: ['Hello! Can I have you?'],
     creator: people.Anna
 }];
 

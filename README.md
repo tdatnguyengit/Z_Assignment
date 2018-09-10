@@ -12,18 +12,25 @@ Install Npm : https://www.npmjs.com/get-npm or Yarn: https://yarnpkg.com/en/docs
 
 ### Installing
 
-Use npm install or yarn install
-Use npm start or yarn start
+Install package
+```
+npm install or yarn install
+```
+Run project
+```
+npm start or yarn start
+```
 
 ## Running the tests
-
-Use npm test or yarn test
+```
+npm test or yarn test
+```
 
 ## Screenshot
+![Demo](https://github.com/tdatnguyengit/Z_Assignment/blob/master/demo.gif)
+## Idea
 
-##Idea
-
-The idea for splitting message was explained within code comment inside splitMessage.js
+The idea for splitting message was explained within code comment inside [splitMessage.js](https://github.com/tdatnguyengit/Z_Assignment/blob/master/src/utils/splitMessage.js)
 
 ## Built With
 
