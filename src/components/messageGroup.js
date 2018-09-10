@@ -8,7 +8,7 @@ class MessageGroup extends Component {
                 {
                     this.props.msgList.map((u, i) =>
                         (
-                            <div key={i} className='message'>
+                            <div key={i} className='message animated bounceIn'>
                                 {u}
                             </div>
                         )

@@ -9,7 +9,7 @@ export const Anna = {
     name: 'Anna',
     color: '#125485',
     isMe: false,
-    picture: 'anna_avatar.png'
+    picture: 'anna_avatar.jpg'
 }
 
 export const Lala = {
